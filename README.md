@@ -12,3 +12,5 @@ I am a 20-year-old irregular student with experience in customer service and edu
 
 - **Elementary**: Pineda Gutierrez Elementary School
 ### My Project
+- **Midterm Task 1**:
+- **Midterm Task 2**:
