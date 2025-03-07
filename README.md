@@ -13,4 +13,4 @@ I am a 20-year-old irregular student with experience in customer service and edu
 - **Elementary**: Pineda Gutierrez Elementary School
 ### My Project
 - **Midterm Task 1**: Data Cleaning and Preparation using EXCEL
-- **Midterm Task 2**: https://github.com/Blooper1209/Portfolio/tree/main/Midterm%20Task%201#readme
+- **Midterm Task 2**: README.md
