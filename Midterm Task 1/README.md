@@ -20,8 +20,7 @@ For this task, we are given a flat data file from Excel (See raw file), and we n
 <img width="953" alt="Before jpeg" src="https://github.com/user-attachments/assets/7b32a501-ac32-4aa5-9c95-09e69b06184d" />
 
 ## Step 4: Screenshot After Data Cleaning
-![Uploading Step 2.edm.png…]()
-
+<img width="960" alt="Step 2 edm" src="https://github.com/user-attachments/assets/3057615c-9875-4469-87c2-08a446beefbf" />
 
 ## Step 5: Physical Data Model
 (Insert Screenshot Here)
