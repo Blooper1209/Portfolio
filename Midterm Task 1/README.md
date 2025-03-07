@@ -16,8 +16,8 @@ For this task, we are given a flat data file from Excel (See raw file), and we n
 - Map the normalized tables as a Physical Data Model
 
 ## Step 3: Screenshot Before Data Cleaning
-[(Insert Screensho<img width="953" alt="Before jpeg" src="https://github.com/user-attachments/assets/1c2dbf44-85a2-41a2-ac6f-1cfbe9de9682" />
-t Here)]
+
+<img width="953" alt="Before jpeg" src="https://github.com/user-attachments/assets/7b32a501-ac32-4aa5-9c95-09e69b06184d" />
 
 ## Step 4: Screenshot After Data Cleaning
 (Insert Screenshot Here)
