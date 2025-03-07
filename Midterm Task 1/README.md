@@ -16,7 +16,7 @@ For this task, we are given a flat data file from Excel (See raw file), and we n
 - Map the normalized tables as a Physical Data Model
 
 ## Step 3: Screenshot Before Data Cleaning
-(Insert Screenshot Here)
+[(Insert Screenshot Here)](https://github.com/Blooper1209/Portfolio/blob/main/Midterm%20Task%201/Images/Before.jpeg.png)
 
 ## Step 4: Screenshot After Data Cleaning
 (Insert Screenshot Here)
