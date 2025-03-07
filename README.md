@@ -1,5 +1,5 @@
 ### EDM-Portfolio -*Blooper
-- This portfolio will contain copies of my Enterprise Data Management Lab Exercises
+This portfolio will contain copies of my Enterprise Data Management Lab Exercises
 ### About me
 *Noel Libiran*  
 I am a 20-year-old irregular student with experience in customer service and education. I have worked as a service crew member at a fast-food restaurant, gaining hands-on experience in teamwork and customer interaction. Additionally, I have worked as an ESL teacher, helping students improve their English communication skills. Passionate about learning and growth, I am always looking for new opportunities to develop my skills and expand my knowledge.
