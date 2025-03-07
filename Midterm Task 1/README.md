@@ -23,4 +23,4 @@ For this task, we are given a flat data file from Excel (See raw file), and we n
 <img width="960" alt="Step 2 edm" src="https://github.com/user-attachments/assets/3057615c-9875-4469-87c2-08a446beefbf" />
 
 ## Step 5: Physical Data Model
-(Insert Screenshot Here)
+<img width="470" alt="After Data Cleaning" src="https://github.com/user-attachments/assets/a954d9b8-f5c8-47b2-bdc4-b6415e05f46d" />
