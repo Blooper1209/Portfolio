@@ -1,3 +1,26 @@
 title: Libiran's Portfolio
 logo : Midterm Task 1/Images/PP.Nl.jfif
 theme: jekyll-theme-Toggle Dark Mode
+/* Smooth Gradient Background */
+body {
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: white;
+    font-family: 'Arial', sans-serif;
+    transition: 0.5s ease-in-out;
+}
+
+/* Style for content */
+.container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Dark Mode Support */
+.dark-mode {
+    background: linear-gradient(135deg, #000000, #434343);
+    color: #f0f0f0;
+}
