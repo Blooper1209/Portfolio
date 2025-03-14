@@ -1,40 +1,73 @@
- let
-    Source = Excel.Workbook(File.Contents("C:\Users\edral\Downloads\Uncleaned_DS_jobs.xlsx"), null, true),
-    Uncleaned_DS_jobs_Sheet = Source{[Item="Uncleaned_DS_jobs",Kind="Sheet"]}[Data],
-    #"Promoted Headers" = Table.PromoteHeaders(Uncleaned_DS_jobs_Sheet, [PromoteAllScalars=true]),
-    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"index", Int64.Type}, {"Job Title", type text}, {"Salary Estimate", type text}, {"Job Description", type text}, {"Rating", type number}, {"Company Name", type text}, {"Location", type text}, {"Headquarters", type any}, {"Size", type any}, {"Founded", Int64.Type}, {"Type of ownership", type any}, {"Industry", type any}, {"Sector", type any}, {"Revenue", type any}, {"Competitors", type any}}),
-    #"Extracted Text Before Delimiter" = Table.TransformColumns(#"Changed Type", {{"Salary Estimate", each Text.BeforeDelimiter(_, "("), type text}}),
-    #"Inserted Text Between Delimiters" = Table.AddColumn(#"Extracted Text Before Delimiter", "Min Sal", each Text.BetweenDelimiters([Salary Estimate], "$", "K"), type text),
-    #"Inserted Text Between Delimiters1" = Table.AddColumn(#"Inserted Text Between Delimiters", "Max Sal", each Text.BetweenDelimiters([Salary Estimate], "$", "K", 1, 0), type text),
-    #"Added Custom" = Table.AddColumn(#"Inserted Text Between Delimiters1", "Role Type", each if Text.Contains([Job Title], "Data Scientist") then
-"Data Scientist"
-else if Text.Contains([Job Title], "Data Analyst") then
-"Data Analyst"
-else if Text.Contains([Job Title], "Data Engineer") then
-"Data Engineer"
-else if Text.Contains([Job Title], "Machine Learning") then
-"Machine Learning Engineer"
-else
-"other"),
-    #"Added Custom1" = Table.AddColumn(#"Added Custom", "Custom", each if [Location]= "New Jersey" then ", NJ"
-else if [Location] = "Remote" then ", other"
-else if [Location]= "United States" then ", other"
-else if [Location]= "Texas" then ", TX"
-else if [Location]= "Patuxent" then ", MA"
-else if [Location]= "California" then ", CA"
-else if [Location]= "Utah" then ", UT"
-else [Location]),
-    #"Renamed Columns" = Table.RenameColumns(#"Added Custom1",{{"Custom", "Location Correction"}}),
-    #"Split Column by Delimiter" = Table.SplitColumn(#"Renamed Columns", "Location Correction", Splitter.SplitTextByDelimiter(",", QuoteStyle.Csv), {"Location Correction.1", "Location Correction.2"}),
-    #"Changed Type1" = Table.TransformColumnTypes(#"Split Column by Delimiter",{{"Location Correction.1", type text}, {"Location Correction.2", type text}}),
-    #"Replaced Value" = Table.ReplaceValue(#"Changed Type1","Anne Rudell","MA",Replacer.ReplaceText,{"Location Correction.2"}),
-    #"Renamed Columns1" = Table.RenameColumns(#"Replaced Value",{{"Location Correction.2", "State Abbreviations"}}),
-    #"Inserted Text Before Delimiter" = Table.AddColumn(#"Renamed Columns1", "MinCompany Size", each Text.BeforeDelimiter([Size], " "), type text),
-    #"Inserted Text Between Delimiters2" = Table.AddColumn(#"Inserted Text Before Delimiter", "MaxCompany Size", each Text.BetweenDelimiters([Size], " ", " ", 1, 0), type text),
-    #"Filtered Rows" = Table.SelectRows(#"Inserted Text Between Delimiters2", each ([Competitors] = -1)),
-    #"Filtered Rows1" = Table.SelectRows(#"Filtered Rows", each ([Revenue] = -1 or [Revenue] = "$1 to $2 billion (USD)" or [Revenue] = "$1 to $5 million (USD)" or [Revenue] = "$2 to $5 billion (USD)" or [Revenue] = "Less than $1 million (USD)" or [Revenue] = "Unknown / Non-Applicable")),
-    #"Filtered Rows2" = Table.SelectRows(#"Filtered Rows1", each ([Industry] = -1)),
-    #"Extracted Text Before Delimiter1" = Table.TransformColumns(#"Filtered Rows2", {{"Company Name", each Text.BeforeDelimiter(_, """ """), type text}}),
-    #"Removed Columns" = Table.RemoveColumns(#"Extracted Text Before Delimiter1",{"Job Description"})
-in
-    #"Removed Columns"
+let  
+    // Load the Excel file and extract data from the specified sheet  
+    Source = Excel.Workbook(File.Contents("C:\Users\edral\Downloads\Uncleaned_DS_jobs.xlsx"), null, true),  
+    Uncleaned_DS_jobs_Sheet = Source{[Item="Uncleaned_DS_jobs", Kind="Sheet"]}[Data],  
+
+    // Promote headers  
+    PromotedHeaders = Table.PromoteHeaders(Uncleaned_DS_jobs_Sheet, [PromoteAllScalars=true]),  
+
+    // Change column types  
+    ChangedType = Table.TransformColumnTypes(PromotedHeaders,  
+        {{"index", Int64.Type}, {"Job Title", type text}, {"Salary Estimate", type text},  
+         {"Job Description", type text}, {"Rating", type text}}),  
+
+    // Extract minimum salary before "(" in Salary Estimate  
+    ExtractedMinSal = Table.TransformColumns(ChangedType,  
+        {{"Salary Estimate", each Text.BeforeDelimiter(_, "("), type text}}),  
+
+    // Extract salary range between "$" and "K"  
+    InsertedMinSal = Table.AddColumn(ExtractedMinSal, "Min Sal",  
+        each Text.BetweenDelimiters([Salary Estimate], "$", "K"), type text),  
+    InsertedMaxSal = Table.AddColumn(InsertedMinSal, "Max Sal",  
+        each Text.BetweenDelimiters([Salary Estimate], "$", "K", 1, 0), type text),  
+
+    // Categorize job titles  
+    AddedRoleType = Table.AddColumn(InsertedMaxSal, "Role Type",  
+        each if Text.Contains([Job Title], "Data Scientist") then "Data Scientist"  
+        else if Text.Contains([Job Title], "Data Analyst") then "Data Analyst"  
+        else if Text.Contains([Job Title], "Data Engineer") then "Data Engineer"  
+        else if Text.Contains([Job Title], "Machine Learning") then "Machine Learning Engineer"  
+        else "Other"),  
+
+    // Normalize location names  
+    AddedLocationCorrection = Table.AddColumn(AddedRoleType, "Location Correction",  
+        each if [Location] = "New Jersey" then ", NJ"  
+        else if [Location] = "Remote" then ", Other"  
+        else if [Location] = "United States" then ", Other"  
+        else if [Location] = "Texas" then ", TX"  
+        else if [Location] = "Patuxent" then ", MA"  
+        else if [Location] = "California" then ", CA"  
+        else if [Location] = "Utah" then ", UT"  
+        else [Location]),  
+
+    // Split location column  
+    SplitLocation = Table.SplitColumn(AddedLocationCorrection, "Location Correction",  
+        Splitter.SplitTextByDelimiter(",", QuoteStyle.Csv),  
+        {"Location Correction.1", "Location Correction.2"}),  
+
+    // Convert column type and replace values  
+    ChangedType1 = Table.TransformColumnTypes(SplitLocation,  
+        {{"Location Correction.1", type text}, {"Location Correction.2", type text}}),  
+    ReplacedValue = Table.ReplaceValue(ChangedType1, "Anne Rudell", "MA",  
+        Replacer.ReplaceText, {"Location Correction.2"}),  
+
+    // Rename final location correction column  
+    RenamedLocation = Table.RenameColumns(ReplacedValue,  
+        {{"Location Correction.2", "State Abbreviations"}}),  
+
+    // Extract company size details  
+    ExtractedMinCompanySize = Table.AddColumn(RenamedLocation, "MinCompanySize",  
+        each Text.BeforeDelimiter([Size], " "), type text),  
+    ExtractedMaxCompanySize = Table.AddColumn(ExtractedMinCompanySize, "MaxCompanySize",  
+        each Text.BetweenDelimiters([Size], " - ", " ", 1, 0), type text),  
+
+    // Filter rows based on certain conditions  
+    FilteredRows = Table.SelectRows(ExtractedMaxCompanySize, each ([Competitors] <> -1)),  
+    FilteredRows1 = Table.SelectRows(FilteredRows, each ([Revenue] <> -1  
+        or [Revenue] = "$1 to $2 Billion (USD)"  
+        or [Revenue] = "$1 to $5 million (USD)"  
+        or [Revenue] = "$2 to $5 billion (USD)")),  
+    FilteredRows2 = Table.SelectRows(FilteredRows1, each ([Industry] <> -1))  
+
+in  
+    FilteredRows2
