@@ -1,8 +1,0 @@
-let
-    Source = Csv.Document(File.Contents("D:\Turla-EDM\Uncleaned_DS_jobs 1.csv"),[Delimiter=",", Columns=21, Encoding=1252, QuoteStyle=QuoteStyle.None]),
-    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
-    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"index", Int64.Type}, {"Job Title", type text}, {"Salary Estimate", type text}, {"Rating", type number}, {"Company Name.1", type text}, {"Location", type text}, {"Headquarters", type text}, {"Size", type text}, {"Founded", Int64.Type}, {"Type of ownership", type text}, {"Industry", type text}, {"Sector", type text}, {"Revenue", type text}, {"Competitors", type text}, {"Min Sal", Int64.Type}, {"Max Sal", Int64.Type}, {"Role Type", type text}, {"Location Correction.1", type text}, {"State Abbreviations", type text}, {"MinCompanySize", type number}, {"MaxCompanySize", Int64.Type}}),
-    #"Merged Queries" = Table.NestedJoin(#"Changed Type",{"State Abbreviations"},states,{"2-letter USPS"},"states",JoinKind.LeftOuter),
-    #"Renamed Columns" = Table.RenameColumns(#"Merged Queries",{{"states", "State Full Name"}})
-in
-    #"Renamed Columns"
