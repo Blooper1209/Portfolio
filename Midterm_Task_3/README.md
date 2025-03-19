@@ -21,10 +21,3 @@ VISUALS/Reports stated under number 2.
 ## Final Output (Screenshot of Final Queries):
 * **Dashboard**
 <img width="457" alt="Libiran Dashboard m3" src="https://github.com/user-attachments/assets/17e77b43-a1af-492d-b4b2-cde405653b8e" />
-
-
-
-* **Map**
-  ![Sample Output](Image/Dashboard%20map.PNG)
-
-
