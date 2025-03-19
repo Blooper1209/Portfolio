@@ -39,12 +39,13 @@ See industry column filter -1’s
 > <sup>Delete columns like Description that are not needed for analysis.
 
 # Screenshot of Dataset Before Cleaning and Transformation
-![Uploading Before Cleaning and transformation.m2.png…]()
+<img width="569" alt="Before Cleaning and transformation m2" src="https://github.com/user-attachments/assets/5f9ca205-a8b8-43e3-bf30-00dc2f419e3a" />
 # Final Output (Screenshot of Final Queries):
 # Normalization
 * _Dependencies and References of the QUERIES_
 ![Sample Output]
-<img width="569" alt="Before Cleaning and transformation m2" src="https://github.com/user-attachments/assets/5f9ca205-a8b8-43e3-bf30-00dc2f419e3a" />
+<img width="452" alt="Normalization m2" src="https://github.com/user-attachments/assets/671a7941-61b7-498e-840a-82bfdb1013b9" />
+
 # Uncleaned DS Jobs(_Cleaned Data_)
 ![Sample Output]
 <img width="571" alt="Uncleaned DS Jobs m2" src="https://github.com/user-attachments/assets/c2703586-f0f6-4aa8-af91-fc65d051c5a1" />
