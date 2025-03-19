@@ -1,4 +1,4 @@
-<img width="569" alt="Before Cleaning and transformation m2" src="https://github.com/user-attachments/assets/5f9ca205-a8b8-43e3-bf30-00dc2f419e3a" />## Midterm Lab Task 2 -  Data Cleaning and Preparation using POWER QUERY
+## Midterm Lab Task 2 -  Data Cleaning and Preparation using POWER QUERY
 * Task Description:
 Company X wants to clean and analyze job posting data from the Uncleaned_DS_Jobs.csv dataset (from Kaggle). The goal is to answer these questions:
 
@@ -43,7 +43,8 @@ See industry column filter -1’s
 # Final Output (Screenshot of Final Queries):
 # Normalization
 * _Dependencies and References of the QUERIES_
-![Sample Output](IMAGE/ERD%20Query.JPG)
+![Sample Output]
+<img width="569" alt="Before Cleaning and transformation m2" src="https://github.com/user-attachments/assets/5f9ca205-a8b8-43e3-bf30-00dc2f419e3a" />
 # Uncleaned DS Jobs(_Cleaned Data_)
 ![Sample Output]
 <img width="571" alt="Uncleaned DS Jobs m2" src="https://github.com/user-attachments/assets/c2703586-f0f6-4aa8-af91-fc65d051c5a1" />
