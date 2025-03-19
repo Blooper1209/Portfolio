@@ -45,14 +45,19 @@ See industry column filter -1’s
 * _Dependencies and References of the QUERIES_
 ![Sample Output](IMAGE/ERD%20Query.JPG)
 # Uncleaned DS Jobs(_Cleaned Data_)
-![Sample Output](IMAGE/Uncleaned.JPG)
+![Sample Output]
+<img width="571" alt="Uncleaned DS Jobs m2" src="https://github.com/user-attachments/assets/c2703586-f0f6-4aa8-af91-fc65d051c5a1" />
 
 # Sal by Role Type dupl
-![Sample Output](IMAGE/Sal%20by%20Role%20Type%20Dupl.JPG)
+![Sample Output]
+<img width="572" alt="Sal_by_role_type_dup m2" src="https://github.com/user-attachments/assets/cef6cf0c-e783-4013-8fcd-b43610573882" />
 
 # Sal by Size ref
-![Sample Output](IMAGE/Sal%20by%20Sze%20Ref.JPG)
+![Sample Output]
+<img width="569" alt="Sal by Size ref m2" src="https://github.com/user-attachments/assets/19f10df0-1274-465c-8c83-e13d3862ec91" />
 
 # Sal by State ref
-![Sample Output](IMAGE/Sal%20by%20Sze%20Ref.JPG)
+![Sample Output]
+<img width="572" alt="Sal by State ref m2" src="https://github.com/user-attachments/assets/d0073dca-4b99-4e85-9e19-8c6c661b94b2" />
+
 
