@@ -41,6 +41,7 @@ See industry column filter -1’s
 # Screenshot of Dataset Before Cleaning and Transformation
 <img width="569" alt="Before Cleaning and transformation m2" src="https://github.com/user-attachments/assets/5f9ca205-a8b8-43e3-bf30-00dc2f419e3a" />
 # Final Output (Screenshot of Final Queries):
+
 # Normalization
 * _Dependencies and References of the QUERIES_
 ![Sample Output]
