@@ -1,4 +1,4 @@
-****Finals Task 1**** **Events Management DB**
+# **Finals Task 1** **Events Management DB**
 **Create Database**:
 We first create the database Naythan_DB if it doesn't already exist. Create events_tbl: This table holds events with an event_id as the primary key and event_name.
 
