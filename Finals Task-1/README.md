@@ -14,3 +14,6 @@
 ### This table links sponsors to events with the event_id and sponsor_name.
 
 # STEP 2 - Here's the screenshot of my output tables (See screenshot)
+<img width="747" alt="Event tbl edm" src="https://github.com/user-attachments/assets/4a5b3225-4d2e-4f38-98f6-44c4848e8e34" /> 
+# STEP 3 - Here's the screenshot of my output ERD (See screenshot)
+<img width="959" alt="Final_Task-1 EDM" src="https://github.com/user-attachments/assets/4412869e-ed3d-48aa-8cd4-cd93b475f1fc" />
