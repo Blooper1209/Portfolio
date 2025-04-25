@@ -30,7 +30,7 @@ INSERT INTO assignment_tb (shortname, due_date, url) VALUES ('EDM19', '2025-04-2
 INSERT INTO submission_tb (username, shortname, version, submit_date, data) VALUES ('Naythan', 'EDM19', 1, '2025-04-21', 'First Submission by Naythan'), ('Naythan', 'EDM19', 2, '2025-04-21', 'Updated Submission by Naythan'), ('Levy', 'NCMA219', 1, '2025-05-12', 'Submission by Levy');
 
 # Task 3 - ER Diagram or Relational schema from phpMyAdmin or Workbench
-<img width="602" alt="Task3 RSfPT EDM" src="https://github.com/user-attachments/assets/ff63ba5e-3da6-4658-b6b6-57e3fce01093" />
+<img width="406" alt="TASK2KO" src="https://github.com/user-attachments/assets/9e582b54-4746-4056-917e-9ddfbd3bf90e" />
 
 # Task 4 - Sql copy of the database and table structures
 
@@ -51,11 +51,11 @@ FOREIGN KEY (shortname) REFERENCES assignment_tb(shortname)
     ON DELETE CASCADE ON UPDATE CASCADE
 );
 
-INSERT INTO student_tb (username) VALUES ('Naythan'), ('Levy');
+INSERT INTO student_tb (username) VALUES ('*Blooper'), ('Shamanae');
 
 INSERT INTO assignment_tb (shortname, due_date, url) VALUES ('EDM19', '2025-04-21','http://assignments.com/EDM'), ('NCMA219', '2025-05-12','http://assignments.com/ncma219');
 
-INSERT INTO submission_tb (username, shortname, version, submit_date, data) VALUES ('Naythan', 'EDM19', 1, '2025-04-21', 'First Submission by Naythan'), ('Naythan', 'EDM19', 2, '2025-04-21', 'Updated Submission by Naythan'), ('Levy', 'NCMA219', 1, '2025-05-12', 'Submission by Levy');
+INSERT INTO submission_tb (username, shortname, version, submit_date, data) VALUES ('*Blooper', 'EDM19', 1, '2025-04-21', 'First Submission by *Blooper'), ('*Blooper', 'EDM19', 2, '2025-04-21', 'Updated Submission by Blooper'), ('Shamanae', 'NCMA219', 1, '2025-05-12', 'Submission by Shamanae');
 
 SELECT * FROM student_tb;
 
