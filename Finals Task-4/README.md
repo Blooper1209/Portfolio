@@ -21,3 +21,4 @@ INSERT INTO EmployeeData (full_name, department, salary, hire_date, manager_id) 
 
 
 ## Task 4 - SQL Copy of the Database and Table Structures
+<img width="347" alt="Task4" src="https://github.com/user-attachments/assets/dcf8fc19-b418-4c11-857e-9ece33cca37f" />
