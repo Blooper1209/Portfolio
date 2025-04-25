@@ -15,7 +15,7 @@ I am a 20-year-old irregular student with experience in customer service and edu
 - **Midterm Task 1**: [Data Cleaning and Preparation using EXCEL](https://github.com/Blooper1209/Portfolio/blob/main/Midterm%20Task%201/README.md)
 - **Midterm Task 2**: [Data Cleaning and Transformation using POWER QUERY](https://github.com/Blooper1209/Portfolio/tree/main/Midterm%20Task%202#readme)
 - **Midterm Task 3**: [Creating PIVOT TABLE and DASHBOARD](https://github.com/Blooper1209/Portfolio/tree/main/Midterm_Task_3#readme)
-# -----------------------------------------------------------------------------------------------------------
+# ------------------------------------------------------------------------------
 - **Final Task 1**: [Events Management DB](https://github.com/Blooper1209/Portfolio/tree/main/Finals%20Task-1#readme)
 - **Final Task 2**: [Transforming ER into Relational Tables](https://github.com/Blooper1209/Portfolio/tree/main/Finals%20Task-2#readme)
 - **Final Task 3**: [Table Manipulation](https://github.com/Blooper1209/Portfolio/tree/main/Finals%20Task-3#readme)
