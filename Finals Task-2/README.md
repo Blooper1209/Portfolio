@@ -23,11 +23,11 @@ FOREIGN KEY (shortname) REFERENCES assignment_tb(shortname)
     ON DELETE CASCADE ON UPDATE CASCADE
 );
 
-INSERT INTO student_tb (username) VALUES ('Naythan'), ('Levy');
+INSERT INTO student_tb (username) VALUES ('*Blooper'), ('Shamanae');
 
 INSERT INTO assignment_tb (shortname, due_date, url) VALUES ('EDM19', '2025-04-21','http://assignments.com/EDM'), ('NCMA219', '2025-05-12','http://assignments.com/ncma219');
 
-INSERT INTO submission_tb (username, shortname, version, submit_date, data) VALUES ('Naythan', 'EDM19', 1, '2025-04-21', 'First Submission by Naythan'), ('Naythan', 'EDM19', 2, '2025-04-21', 'Updated Submission by Naythan'), ('Levy', 'NCMA219', 1, '2025-05-12', 'Submission by Levy');
+INSERT INTO submission_tb (username, shortname, version, submit_date, data) VALUES ('*Blooper', 'EDM19', 1, '2025-04-25', 'First Submission by *Blooper'), ('*Blooper', 'EDM19', 2, '2025-04-25', 'Updated Submission by *Blooper'), ('Shamanae', 'NCMA219', 1, '2025-05-12', 'Submission by Shamanae');
 
 # Task 3 - ER Diagram or Relational schema from phpMyAdmin or Workbench
 <img width="406" alt="TASK2KO" src="https://github.com/user-attachments/assets/9e582b54-4746-4056-917e-9ddfbd3bf90e" />
