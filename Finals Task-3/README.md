@@ -14,8 +14,10 @@ INSERT INTO products_tbl (product_name, price) VALUES ('Laptop', 999.99), ('Smar
 
 ALTER TABLE products_tbl MODIFY COLUMN product_name VARCHAR(120) NOT NULL;
 ## Task 3 - Relational Schema for Products Table
+<img width="434" alt="Task3Po" src="https://github.com/user-attachments/assets/a3842792-d833-4a6f-9caf-391b21bee6a6" />
 
 ## Task 4 - SQL Copy of the Database and Table Structures
+(Raw Copy of MySQL File)[https://github.com/Blooper1209/Portfolio/blob/main/Finals%20Task-3/File/*Blooper]
 CREATE DATABASE products_db; USE products_db;
 
 CREATE TABLE products_tbl ( id INT AUTO_INCREMENT PRIMARY KEY, product_name VARCHAR(100) NOT NULL, price DECIMAL(10, 2) );
