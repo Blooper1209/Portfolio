@@ -12,7 +12,9 @@ I am a 20-year-old irregular student with experience in customer service and edu
 - **High School**: Francisco G. Nepomuceno Memorial High School
 
 - **Elementary**: Pineda Gutierrez Elementary School
+  
 #
+
 ### My Project
 - **Midterm Task 1**: [Data Cleaning and Preparation using EXCEL](https://github.com/Blooper1209/Portfolio/blob/main/Midterm%20Task%201/README.md)
 - **Midterm Task 2**: [Data Cleaning and Transformation using POWER QUERY](https://github.com/Blooper1209/Portfolio/tree/main/Midterm%20Task%202#readme)
