@@ -20,6 +20,7 @@ FROM Products
 WHERE p_price BETWEEN 100 AND 150;
 SELECT * FROM view_products_price_100_150;
 ![image](https://github.com/user-attachments/assets/8ae386c2-df01-4a7c-b9f6-92ae03567d79)
+
 ### 3.	Create a VIEW that will COMPUTE for the (TOTAL_PRICE) of ALL PRODUCTS by getting the (P_ONHAND x P_PRICE) Sold by vendors with the following v_code (21344, 23119 and 24288)
 CREATE VIEW view_total_price_by_vendor AS
 SELECT v.v_code, v.v_name, p.p_descript, (p.p_onhand * p.p_price) AS total_price
@@ -27,7 +28,9 @@ FROM vendors v
 JOIN Products p ON v.v_code = p.v_code
 WHERE v.v_code IN (21344, 23119, 24288);
 SELECT * FROM view_total_price_by_vendor;
+
 ![image](https://github.com/user-attachments/assets/d18b8e48-c23a-4956-ad03-9528910c971d)
+
 ### 4.	CREATE a STORED PROCEDURE that WILL take a SINGLE PARAMETER and UPDATED the Name of Vendor ‘Bryson,Inc.’ to ‘Bryson and Co’.
 DELIMITER //
 
@@ -62,4 +65,5 @@ END //
 DELIMITER ;
 
 SELECT get_products_by_vendor(21344, 'KY');
+
 ![image](https://github.com/user-attachments/assets/525c0464-0a82-4191-b84f-b1664e7e8762)
