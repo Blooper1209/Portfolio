@@ -25,3 +25,4 @@ I am a 20-year-old irregular student with experience in customer service and edu
 - **Final Task 3**: [Table Manipulation](https://github.com/Blooper1209/Portfolio/tree/main/Finals%20Task-3#readme)
 - **Final Task 4**: [Employee Databases](https://github.com/Blooper1209/Portfolio/blob/main/Finals%20Task-4/README.md)
 - **Final Task 5**: [Using SQL views and Stored Procedures and Stored Functions](https://github.com/Blooper1209/Portfolio/tree/main/Finals%20Task-5#readme)
+- **Final Task 6**: [MongoDB Practice](https://github.com/Blooper1209/Portfolio/tree/main/Finals%20Task-6#readme)
